@@ -5,7 +5,7 @@ import random from 'random';
 
 const path = './data.json';
 const git = simpleGit();
-const NUM_COMMITS = 500;
+const NUM_COMMITS = 20;
 
 const makeCommits = (n) => {
     if (n === 0) {
@@ -15,8 +15,8 @@ const makeCommits = (n) => {
             .catch((err) => console.error('Push failed:', err));
     }
 
-    const dayOffset = random.int(0, 364);
-    const date = moment('2024-01-01')
+    const dayOffset = random.int(223, 227);
+    const date = moment('2026-01-01')
         .add(dayOffset, 'days')
         .add(random.int(0, 23), 'hours')
         .add(random.int(0, 59), 'minutes')
